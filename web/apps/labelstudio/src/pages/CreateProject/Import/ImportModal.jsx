@@ -64,7 +64,7 @@ export const Inner = () => {
     >
       <Modal.Header divided>
         <Elem block="modal" name="title">
-          导入 数据
+          导入数据
         </Elem>
 
         <Space>

@@ -68,7 +68,7 @@ const Labels = {
   type: "Labels",
   settings: {
     placeLabelsLeft: {
-      title: "Display labels:",
+      title: "标签位置:",
       type: ["bottom", "left", "right", "top"],
       control: true,
       when: ($tag) => $tag.$object.tagName !== "Video",
@@ -114,7 +114,7 @@ const Labels = {
       },
     },
     filter: {
-      title: "Add filter for long list of labels",
+      title: "给标签列表添加过滤器",
       type: Boolean,
       control: true,
       param: ($obj, value) => {

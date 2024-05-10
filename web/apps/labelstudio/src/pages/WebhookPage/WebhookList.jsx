@@ -32,7 +32,7 @@ const WebhookList = ({ onSelectActive, onAddWebhook, webhooks, fetchWebhooks }) 
   return (
     <Block name="webhook">
       <Elem name="controls">
-        <Button onClick={onAddWebhook}>Add Webhook</Button>
+        <Button onClick={onAddWebhook}>新增网络钩子</Button>
       </Elem>
       <Elem>
         {webhooks.length === 0 ? null : (
@@ -45,7 +45,7 @@ const WebhookList = ({ onSelectActive, onAddWebhook, webhooks, fetchWebhooks }) 
                 <Elem name="item-url" onClick={() => onSelectActive(obj.id)}>
                   {obj.url}
                 </Elem>
-                <Elem name="item-date">Created {format(new Date(obj.created_at), "dd MMM yyyy, HH:mm")}</Elem>
+                <Elem name="item-date">Created {format(new Date(obj.created_at), "yyyy-MM-dd HH:mm")}</Elem>
                 <Elem name="item-control">
                   <Button onClick={() => onSelectActive(obj.id)} icon={<LsPencil />}>
                     Edit

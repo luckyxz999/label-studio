@@ -253,7 +253,7 @@ const WebhookDetail = ({ webhook, webhooksInfo, fetchWebhooks, onBack, onSelectA
                     })
                   }
                 >
-                  Delete Webhook...
+                  正在删除...
                 </Button>
               )}
               <div className={rootClass.elem("status")}>
@@ -263,7 +263,7 @@ const WebhookDetail = ({ webhook, webhooksInfo, fetchWebhooks, onBack, onSelectA
                 Cancel
               </Button>
               <Button primary className={rootClass.elem("save-button")}>
-                {webhook === null ? "Add Webhook" : "Save"}
+                {webhook === null ? "新增网络钩子" : "保存"}
               </Button>
             </Elem>
           </Form>

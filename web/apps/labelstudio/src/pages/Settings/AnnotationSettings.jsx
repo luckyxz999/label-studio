@@ -33,13 +33,13 @@ export const AnnotationSettings = () => {
           onSubmit={updateProject}
         >
           <Form.Row columnCount={1}>
-            <Elem name={"header"}>Labeling Instructions</Elem>
+            <Elem name={"header"}>打标签说明</Elem>
             <div>
-              <Toggle label="Show before labeling" name="show_instruction" />
+              <Toggle label="在打标签之前显示" name="show_instruction" />
             </div>
             <div style={{ color: "rgba(0,0,0,0.4)" }}>
-              <p>Write instructions to help users complete labeling tasks.</p>
-              <p>The instruction field supports HTML markup and it allows use of images, iframes (pdf).</p>
+              <p>在下方添加打标签教程文档</p>
+              <p>文档支持HTML语法，支持图片和iframe(pdf)</p>
             </div>
           </Form.Row>
 
@@ -51,11 +51,11 @@ export const AnnotationSettings = () => {
 
           <Form.Row columnCount={1} style={{ borderTop: "1px solid #f1f1f1" }}>
             <br />
-            <Elem name={"header"}>Prelabeling</Elem>
+            <Elem name={"header"}>预标记</Elem>
             <div>
               <Toggle
-                label="Use predictions to prelabel tasks"
-                description={<span>Enable and select which set of predictions to use for prelabeling.</span>}
+                label="使用预测算法进行预标记"
+                description={<span>开启并选择预测算法进行预标记.</span>}
                 name="show_collab_predictions"
                 onChange={(e) => {
                   setCollab(e.target.checked);
@@ -68,10 +68,10 @@ export const AnnotationSettings = () => {
 
           <Form.Actions>
             <Form.Indicator>
-              <span case="success">Saved!</span>
+              <span case="success">保存成功!</span>
             </Form.Indicator>
             <Button type="submit" look="primary" style={{ width: 120 }}>
-              Save
+              保存
             </Button>
           </Form.Actions>
         </Form>
@@ -80,5 +80,5 @@ export const AnnotationSettings = () => {
   );
 };
 
-AnnotationSettings.title = "Annotation";
+AnnotationSettings.title = "标注";
 AnnotationSettings.path = "/annotation";

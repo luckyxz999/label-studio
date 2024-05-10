@@ -78,7 +78,7 @@ export const FF_DEV_2715 = "ff_front_dev_2715_audio_3_280722_short";
 export const FF_DEV_2755 = "fflag_feat_dev_2755_regions_list_grouped_by_labels_with_ordered_collapse_short";
 
 /**
- * Creating separated regions if selection includes hidden phrases
+ * Creating separated regions if deselection includes hidden phrases
  * @see FF_DEV_2669 (allows filtering)
  * @link https://app.launchdarkly.com/default/production/features/fflag_fix_front_dev_2918_labeling_filtered_paragraphs_250822_short
  */

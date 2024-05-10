@@ -95,7 +95,7 @@ const HistoryTab: FC<any> = inject("store")(
           ) : (
             <Elem name="section-tab">
               <Elem name="section-head">
-                Annotation History
+                标注历史
                 <span>#{currentEntity.pk ?? currentEntity.id}</span>
               </Elem>
               <Elem name="section-content">
@@ -115,7 +115,7 @@ const InfoTab: FC<any> = inject("store")(
       <>
         <Block name="info">
           <Elem name="section-tab">
-            <Elem name="section-head">Selection Details</Elem>
+            <Elem name="section-head">选择详情</Elem>
             <RegionsPanel regions={selection} />
           </Elem>
         </Block>
@@ -137,7 +137,7 @@ const GeneralPanel: FC<any> = inject("store")(
         ) : (
           <Elem name="section">
             <Elem name="section-head">
-              Annotation History
+              标注历史
               <span>#{currentEntity.pk ?? currentEntity.id}</span>
             </Elem>
             <Elem name="section-content">

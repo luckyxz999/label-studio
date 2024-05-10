@@ -43,7 +43,7 @@ const pages = {
 isAllowCloudStorage && (pages.StorageSettings = StorageSettings);
 
 export const SettingsPage = {
-  title: "Settings",
+  title: "设置",
   path: "/settings",
   exact: true,
   layout: MenuLayout,

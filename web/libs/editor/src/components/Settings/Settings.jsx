@@ -141,7 +141,7 @@ const LayoutSettings = observer(({ store }) => {
 
       <Elem name="field">
         <Checkbox checked={store.settings.displayLabelsByDefault} onChange={store.settings.toggleSidepanelModel}>
-          Display Labels by default in Results panel
+          默认在结果面板里展示标签
         </Checkbox>
       </Elem>
 
@@ -199,7 +199,7 @@ const DEFAULT_ACTIVE = Object.keys(Settings)[0];
 const DEFAULT_MODAL_SETTINGS = isFF(FF_DEV_3873)
   ? {
       name: "settings-modal",
-      title: "Labeling Interface Settings",
+      title: "标签界面设置",
       closeIcon: <LsClose />,
     }
   : {

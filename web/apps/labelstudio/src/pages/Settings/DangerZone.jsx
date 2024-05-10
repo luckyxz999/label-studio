@@ -95,8 +95,8 @@ export const DangerZone = () => {
   return (
     <div style={{ width: 480 }}>
       <Label
-        text="Delete Annotations, Tasks, or Project"
-        description="Perform these actions at your own risk. Actions you take on this page can't be reverted. Make sure your data is backed up."
+        text="删除项目、任务和标注"
+        description="数据删除后无法恢复，操作之前请先备份"
         style={{ display: "block", width: 415 }}
       />
 
@@ -134,5 +134,5 @@ export const DangerZone = () => {
   );
 };
 
-DangerZone.title = "Danger Zone";
+DangerZone.title = "危险操作区";
 DangerZone.path = "/danger-zone";

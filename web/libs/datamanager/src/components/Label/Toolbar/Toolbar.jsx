@@ -57,7 +57,7 @@ export const Toolbar = observer(({ view, history, lsf, isLabelStream, hasInstruc
           <Elem name="tools">
             <Space>
               {hasInstruction && (
-                <Tooltip title="Labeling Instructions">
+                <Tooltip title="打标签说明">
                   <Button
                     look={lsf.showingDescription ? "primary" : "dashed"}
                     icon={<Icon icon={FaInfoCircle} />}
@@ -66,7 +66,7 @@ export const Toolbar = observer(({ view, history, lsf, isLabelStream, hasInstruc
                 </Tooltip>
               )}
 
-              <Tooltip title="Settings">
+              <Tooltip title="设置">
                 <Button look="dashed" icon={<Icon icon={FaCog} />} onClick={() => lsf.toggleSettings()} />
               </Tooltip>
             </Space>

@@ -550,7 +550,7 @@ Form.Indicator = () => {
     <Block name="form-indicator">
       <Oneof value={state}>
         <Elem tag="span" mod={{ type: state }} name="item" case="success">
-          Saved!
+          保存成功
         </Elem>
       </Oneof>
     </Block>

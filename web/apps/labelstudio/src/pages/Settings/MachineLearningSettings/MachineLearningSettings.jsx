@@ -170,7 +170,7 @@ export const MachineLearningSettings = () => {
           {backends.length > 0 && (
             <Form.Actions>
               <Form.Indicator>
-                <span case="success">Saved!</span>
+                <span case="success">保存成功</span>
               </Form.Indicator>
               <Button type="submit" look="primary" style={{ width: 120 }}>
                 Save
@@ -183,5 +183,5 @@ export const MachineLearningSettings = () => {
   );
 };
 
-MachineLearningSettings.title = "Model";
+MachineLearningSettings.title = "模型";
 MachineLearningSettings.path = "/ml";

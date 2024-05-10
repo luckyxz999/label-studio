@@ -27,7 +27,7 @@ const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, 
       }}
     >
       <div className="field field--wide">
-        <label htmlFor="project_name">Project Name</label>
+        <label htmlFor="project_name">项目名称</label>
         <input
           name="name"
           id="project_name"
@@ -99,9 +99,9 @@ export const CreateProject = ({ onClose }) => {
   const rootClass = cn("create-project");
   const tabClass = rootClass.elem("tab");
   const steps = {
-    name: <span className={tabClass.mod({ disabled: !!error })}>Project Name</span>,
-    import: <span className={tabClass.mod({ disabled: uploadDisabled })}>Data Import</span>,
-    config: "Labeling Setup",
+    name: <span className={tabClass.mod({ disabled: !!error })}>项目名称</span>,
+    import: <span className={tabClass.mod({ disabled: uploadDisabled })}>数据导入</span>,
+    config: "标注设置",
   };
 
   // name intentionally skipped from deps:

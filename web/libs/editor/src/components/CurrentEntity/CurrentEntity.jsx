@@ -53,7 +53,7 @@ export const CurrentEntity = injector(
         {/* {showHistory && !entity.userGenerate && ( */}
         {showHistory && (
           <Elem tag={Space} spread name="title">
-            Annotation History
+            标注历史
             <Elem name="id">#{entity.pk ?? entity.id}</Elem>
           </Elem>
         )}

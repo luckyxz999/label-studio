@@ -63,7 +63,7 @@ export const ModelVersionSelector = ({
     }
 
     if (!modelVersions?.static?.length && !modelVersions?.live?.length) {
-      setPlaceholder("No model or predictions available");
+      setPlaceholder("没有可用模型或预测算法");
     }
 
     setLoading(false);
@@ -73,7 +73,7 @@ export const ModelVersionSelector = ({
 
   return (
     <div>
-      <p>Select which predictions or which model you want to use:</p>
+      <p>选择你想使用的模型或预测器:</p>
       <div style={{ display: "flex", alignItems: "center", width: 400 }}>
         <div style={{ flex: 1, paddingRight: 16 }}>
           <Select
@@ -82,7 +82,7 @@ export const ModelVersionSelector = ({
             value={version}
             onChange={(e) => setVersion(e.target.value)}
             options={[...models, ...versions]}
-            placeholder={loading ? "Loading ..." : placeholder ? placeholder : "Please select model or predictions"}
+            placeholder={loading ? "加载中 ..." : placeholder ? placeholder : "请选择"}
             {...props}
           />
         </div>

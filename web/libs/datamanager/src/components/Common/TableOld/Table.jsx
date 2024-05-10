@@ -297,7 +297,7 @@ export const Table = observer(
                 wrapper={FieldsButton.Checkbox}
                 icon={<LsGearNewUI />}
                 style={{ padding: "0" }}
-                tooltip={"Customize Columns"}
+                tooltip={"定制字段"}
               />
             ) : (
               <FieldsButton

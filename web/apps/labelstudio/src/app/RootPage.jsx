@@ -8,7 +8,7 @@ export const RootPage = ({ content }) => {
 
   return (
     <Menubar
-      enabled={false}
+      enabled={true}
       defaultOpened={opened}
       defaultPinned={pinned}
       onSidebarToggle={(visible) => localStorage.setItem("sidebar-opened", visible)}

@@ -83,7 +83,7 @@ def get_all_columns(project, *_):
             'id': 'id',
             'title': 'ID',
             'type': 'Number',
-            'help': 'Task ID',
+            'help': '任务ID',
             'target': 'tasks',
             'visibility_defaults': {'explore': True, 'labeling': False},
             'project_defined': False,
