@@ -141,7 +141,7 @@ export const ActionsButton = injector(
     };
 
     const actionButtons = actions.map(ActionButton);
-    const recordTypeLabel = isFFLOPSE3 && store.SDK.type === "DE" ? "Record" : "Task";
+    const recordTypeLabel = isFFLOPSE3 && store.SDK.type === "DE" ? "记录" : "任务";
 
     return (
       <Dropdown.Trigger
@@ -158,7 +158,7 @@ export const ActionsButton = injector(
         onToggle={(visible) => isFFLOPSE3 && setIsOpen(visible)}
       >
         <Button {...(isNewUI ? { className: "actionButtonPrime" } : {})} size={size} disabled={!hasSelected} {...rest}>
-          {selectedCount > 0 ? `${selectedCount} ${recordTypeLabel}${selectedCount > 1 ? "s" : ""}` : "Actions"}
+          {selectedCount > 0 ? `${selectedCount} ${recordTypeLabel}${selectedCount > 1 ? "" : ""}` : "操作"}
           {isNewUI ? (
             isOpen ? (
               <FaChevronUp size="12" style={{ marginLeft: 4, marginRight: -7 }} />

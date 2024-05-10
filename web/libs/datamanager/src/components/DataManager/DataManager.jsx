@@ -52,10 +52,10 @@ const ProjectSummary = summaryInjector((props) => {
       <span style={{ display: "flex", alignItems: "center", fontSize: 12 }}>
         <Space size="compact">
           <span>
-            Tasks: {props.totalFoundTasks} / {props.totalTasks}
+            任务: {props.totalFoundTasks} / {props.totalTasks}
           </span>
-          <span>Annotations: {props.totalAnnotations}</span>
-          <span>Predictions: {props.totalPredictions}</span>
+          <span>标注: {props.totalAnnotations}</span>
+          <span>预测: {props.totalPredictions}</span>
         </Space>
       </span>
     </Space>

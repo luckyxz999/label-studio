@@ -105,7 +105,7 @@ export const LabelButton = injector(({ store, canLabel, size, target, selectedCo
             style={primaryStyle}
             onClick={onLabelAll}
           >
-            Label {selectedCount ? selectedCount : "All"} Task{!selectedCount || selectedCount > 1 ? "s" : ""}
+            标注{selectedCount ? selectedCount : "全部"}任务{!selectedCount || selectedCount > 1 ? "" : ""}
           </Button>
           <Button
             ref={triggerRef}
@@ -118,7 +118,7 @@ export const LabelButton = injector(({ store, canLabel, size, target, selectedCo
           </Button>
         </div>
         <Button size={size} style={secondStyle} mod={{ size: size ?? "medium", disabled }} onClick={onLabelVisible}>
-          Label Tasks As Displayed
+          标注当前
         </Button>
       </div>
     </Interface>
