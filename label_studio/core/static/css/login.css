@@ -110,6 +110,8 @@ html, body {
   display: flex;
   font-weight: 400;
   height: 100%;
+  background: url('../images/loginbg.png') no-repeat;
+  background-size: cover;
 }
 
 .login_page_new_ui .left {
@@ -228,6 +230,11 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.login_page_new_ui .right .login_form {
+  background-color: #ffffff;
+  padding: 20px;
 }
 
 .login_page_new_ui .toggle, .login_page_new_ui form {

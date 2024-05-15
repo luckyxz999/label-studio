@@ -4,6 +4,7 @@ import logging
 
 import drf_yasg.openapi as openapi
 from core.permissions import ViewClassPermission, all_permissions
+from django.contrib.auth.hashers import make_password
 from django.utils.decorators import method_decorator
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework import generics, viewsets
@@ -133,6 +134,11 @@ class UserAPI(viewsets.ModelViewSet):
         return super(UserAPI, self).list(request, *args, **kwargs)
 
     def create(self, request, *args, **kwargs):
+        request.data.update({'user': request.user.id})
+        if isinstance(request.data, dict):  # optional
+            if 'password' in request.data:
+                password = request.data.get("password")
+                request.data["password"] = make_password(password)
         return super(UserAPI, self).create(request, *args, **kwargs)
 
     def perform_create(self, serializer):
