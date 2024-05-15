@@ -7,12 +7,12 @@ const URL_CORS_DOCS = "https://labelstud.io/guide/storage.html#Troubleshoot-CORS
 const URL_TAGS_DOCS = "https://labelstud.io/tags";
 
 export default {
-  DONE: "Done!",
-  NO_COMP_LEFT: "No more annotations",
-  NO_NEXT_TASK: "No More Tasks Left in Queue",
-  NO_ACCESS: "You don't have access to this task",
+  DONE: "已完成!",
+  NO_COMP_LEFT: "没有更多的标注了",
+  NO_NEXT_TASK: "队列里没有更多任务了",
+  NO_ACCESS: "无权限访问该任务",
 
-  CONFIRM_TO_DELETE_ALL_REGIONS: "Please confirm you want to delete all labeled regions",
+  CONFIRM_TO_DELETE_ALL_REGIONS: "是否确认删除全部标签",
 
   // Tree validation messages
   ERR_REQUIRED: ({ modelName, field }) => {

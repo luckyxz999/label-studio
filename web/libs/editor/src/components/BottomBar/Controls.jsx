@@ -199,7 +199,7 @@ export const Controls = controlsInjector(
                 onClickMethod();
               }}
             >
-              {`${isUpdate ? "Update" : "Submit"} and exit`}
+              {`${isUpdate ? "更新" : "提交"}并退出`}
             </Button>
           );
         };
@@ -275,7 +275,7 @@ export const Controls = controlsInjector(
                   )
                 }
               >
-                {isUpdate ? "Update" : "Submit"}
+                {isUpdate ? "更新" : "提交"}
               </Button>
             </ButtonTooltip>
           );
@@ -324,7 +324,7 @@ export const Controls = controlsInjector(
                   store.updateAnnotation();
                 }}
               >
-                {isUpdate ? "Update" : "Submit"}
+                {isUpdate ? "更新" : "提交"}
               </Button>
             </ButtonTooltip>
           );

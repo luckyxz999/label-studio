@@ -236,7 +236,7 @@ DataManagerPage.context = ({ dmRef }) => {
       }
       addCrumb({
         key: "dm-crumb",
-        title: "Labeling",
+        title: "打标签",
       });
     }
   };

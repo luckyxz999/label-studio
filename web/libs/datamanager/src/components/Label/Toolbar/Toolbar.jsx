@@ -127,7 +127,7 @@ const SubmissionButtons = observer(({ lsf, annotation, isLabelStream, disabled }
         icon={<Icon icon={isNewTask ? FaCheck : FaCheckCircle} />}
         onClick={saveAnnotation}
       >
-        {isNewTask || isLabelStream ? "Submit" : "Update"}
+        {isNewTask || isLabelStream ? "提交" : "更新"}
       </Button>
     </Tooltip>,
   );

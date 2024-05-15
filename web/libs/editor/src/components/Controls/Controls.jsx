@@ -89,7 +89,7 @@ export default inject("store")(
               onClick={store.updateAnnotation}
               className="ls-update-btn"
             >
-              {sentUserGenerate || versions.result ? "Update" : "Submit"} {buttons.update}
+              {sentUserGenerate || versions.result ? "更新" : "提交"} {buttons.update}
             </Button>
           </Tooltip>
         );

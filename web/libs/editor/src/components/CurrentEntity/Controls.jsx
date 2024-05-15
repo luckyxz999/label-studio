@@ -88,7 +88,7 @@ export const Controls = controlsInjector(
         buttons.push(
           <ButtonTooltip key="update" name="annotation:submit" title="Update this task">
             <Button disabled={disabled || submitDisabled} look="primary" onClick={store.updateAnnotation}>
-              {sentUserGenerate || versions.result ? "Update" : "Submit"}
+              {sentUserGenerate || versions.result ? "更新" : "提交"}
             </Button>
           </ButtonTooltip>,
         );
