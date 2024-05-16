@@ -198,7 +198,7 @@ export const MediaPlayer = ({ src, video = false }) => {
           <Elem name="play">
             <FaPlay />
           </Elem>
-          <Elem name="track">Click to load</Elem>
+          <Elem name="track">点击加载</Elem>
         </Space>
         <Elem tag={Space} size="small" name="time" />
       </Elem>

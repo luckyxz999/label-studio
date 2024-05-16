@@ -77,7 +77,7 @@ export const Controls = controlsInjector(
           <ButtonTooltip key="submit" name="annotation:submit" title={title}>
             <Elem name="tooltip-wrapper">
               <Button disabled={disabled || submitDisabled} look="primary" onClick={store.submitAnnotation}>
-                Submit
+                提交
               </Button>
             </Elem>
           </ButtonTooltip>,

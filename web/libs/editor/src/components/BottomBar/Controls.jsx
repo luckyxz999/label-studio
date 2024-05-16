@@ -237,7 +237,7 @@ export const Controls = controlsInjector(
                     )
                   }
                 >
-                  Submit
+                  提交
                 </Button>
               </Elem>
             </ButtonTooltip>,
@@ -301,7 +301,7 @@ export const Controls = controlsInjector(
                     store.submitAnnotation();
                   }}
                 >
-                  Submit
+                  提交
                 </Button>
               </Elem>
             </ButtonTooltip>,

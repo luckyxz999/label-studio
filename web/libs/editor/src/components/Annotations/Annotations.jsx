@@ -153,9 +153,9 @@ const Annotation = observer(({ item, store }) => {
               placement="bottomLeft"
               title={"Please confirm you want to delete this annotation"}
               onConfirm={confirm}
-              okText="Delete"
+              okText="删除"
               okType="danger"
-              cancelText="Cancel"
+              cancelText="取消"
             >
               <Button size="small" danger style={{ background: "transparent" }}>
                 <DeleteOutlined />

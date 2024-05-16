@@ -73,7 +73,7 @@ export default inject("store")(
               onClick={store.submitAnnotation}
               className={`${styles.submit} ls-submit-btn`}
             >
-              Submit {buttons.submit}
+              提交 {buttons.submit}
             </Button>
           </Tooltip>
         );
