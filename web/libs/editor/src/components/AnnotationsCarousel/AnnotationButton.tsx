@@ -150,7 +150,7 @@ export const AnnotationButton = observer(
               <Elem name="icon">
                 <IconDuplicate width={20} height={24} />
               </Elem>
-              Duplicate Annotation
+              拷贝标注
             </Elem>
           )}
           {capabilities.enableAnnotationDelete && !isPrediction && (
