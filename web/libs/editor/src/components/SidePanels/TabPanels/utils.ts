@@ -130,7 +130,7 @@ export const panelComponents: { [key: string]: FC<PanelProps> } = {
 const panelViews = [
   {
     name: "regions",
-    title: "领域",
+    title: "区域",
     component: panelComponents.regions as FC<PanelProps>,
     active: true,
   },

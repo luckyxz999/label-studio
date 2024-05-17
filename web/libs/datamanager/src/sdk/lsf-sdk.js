@@ -609,9 +609,9 @@ export class LSFWrapper {
     const status = result?.$meta?.status;
 
     if (status === 200 || status === 201)
-      this.datamanager.invoke("toast", { message: "Annotation updated successfully", type: "info" });
+      this.datamanager.invoke("toast", { message: "标注更新成功", type: "info" });
     else if (status !== undefined)
-      this.datamanager.invoke("toast", { message: "There was an error updating your Annotation", type: "error" });
+      this.datamanager.invoke("toast", { message: "更新标注出错", type: "error" });
 
     this.datamanager.invoke("updateAnnotation", ls, annotation, result);
 
