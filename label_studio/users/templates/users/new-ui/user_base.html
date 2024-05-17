@@ -7,7 +7,7 @@
 {% block head %}
 <link rel="stylesheet" href="{{ settings.HOSTNAME }}{% static 'css/login.css' %}"/>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129877673-1" nonce="{{request.csp_nonce}}"></script>
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129877673-1" nonce="{{request.csp_nonce}}"></script>-->
 <script nonce="{{request.csp_nonce}}">
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -24,7 +24,7 @@ gtag('config', 'UA-129877673-1');
         <h1>微表情数据标注系统</h1>
         <div class="toggle">
             {% if not settings.DISABLE_SIGNUP_WITHOUT_LINK %}
-            <a href="{{ settings.HOSTNAME }}/user/signup" class="{% if 'signup' in request.path %}active{% endif %}">注册</a>
+<!--            <a href="{{ settings.HOSTNAME }}/user/signup" class="{% if 'signup' in request.path %}active{% endif %}">注册</a>-->
             <a href="{{ settings.HOSTNAME }}/user/login" class="{% if 'login' in request.path %}active{% endif %}">登录</a>
             {% endif %}
         </div>
