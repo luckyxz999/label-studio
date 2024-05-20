@@ -577,9 +577,9 @@ export class LSFWrapper {
     const status = result?.$meta?.status;
 
     if (status === 200 || status === 201)
-      this.datamanager.invoke("toast", { message: "Annotation saved successfully", type: "info" });
+      this.datamanager.invoke("toast", { message: "标注保存成功", type: "info" });
     else if (status !== undefined)
-      this.datamanager.invoke("toast", { message: "There was an error saving your Annotation", type: "error" });
+      this.datamanager.invoke("toast", { message: "保存标注结果出错了", type: "error" });
 
     if (exitStream) return this.exitStream();
   };
