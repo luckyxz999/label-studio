@@ -75,10 +75,10 @@ export const ConfigControl: FC<ConfigControlProps> = ({
     return (
       <Elem name={"buttons"}>
         <Elem name="menu-button" onClick={handleSetTimeline}>
-          {isTimeline ? "Hide" : "Show"} timeline
+          {isTimeline ? "隐藏" : "显示"} 时间线
         </Elem>
         <Elem name="menu-button" onClick={handleSetAudioWave}>
-          {isAudioWave ? "Hide" : "Show"} audio wave
+          {isAudioWave ? "隐藏" : "显示"} 音频波形
         </Elem>
       </Elem>
     );
@@ -92,8 +92,8 @@ export const ConfigControl: FC<ConfigControlProps> = ({
           max={MAX_SPEED}
           step={0.1}
           value={playbackSpeed}
-          description={"Playback speed"}
-          info={"Increase or decrease the playback speed"}
+          description={"播放速度"}
+          info={"拖动滑块加快/降低播放速度"}
           onChange={handleChangePlaybackSpeed}
         />
         <Slider
@@ -101,8 +101,8 @@ export const ConfigControl: FC<ConfigControlProps> = ({
           max={MAX_ZOOM}
           step={0.1}
           value={amp}
-          description={"Audio zoom y-axis"}
-          info={"Increase or decrease the appearance of amplitude"}
+          description={"音频Y轴缩放"}
+          info={"增加/减少音频的波幅显示"}
           onChange={handleChangeAmp}
         />
         {renderLayerToggles()}
