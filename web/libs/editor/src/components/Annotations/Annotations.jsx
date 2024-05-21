@@ -217,7 +217,7 @@ class Annotations extends Component {
 
         <div style={{ marginRight: "1px" }}>
           {store.hasInterface("annotations:add-new") && (
-            <Tooltip placement="topLeft" title="Create a new annotation">
+            <Tooltip placement="topLeft" title="新增标注">
               <Button
                 size="small"
                 onClick={(ev) => {
@@ -233,7 +233,7 @@ class Annotations extends Component {
             </Tooltip>
           )}
           &nbsp;
-          <Tooltip placement="topLeft" title="View all annotations">
+          <Tooltip placement="topLeft" title="查看所有标注">
             <Button
               size="small"
               type={store.annotationStore.viewingAll ? "primary" : ""}
@@ -253,7 +253,7 @@ class Annotations extends Component {
 
     return (
       <Card title={title} size="small" bodyStyle={{ padding: "0", paddingTop: "1px" }}>
-        <List>{store.annotationStore.annotations ? content : <p>No annotations submitted yet</p>}</List>
+        <List>{store.annotationStore.annotations ? content : <p>还没有标注数据</p>}</List>
       </Card>
     );
   }

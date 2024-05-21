@@ -104,7 +104,8 @@ def user_login(request):
     form = login_form()
 
     if user.is_authenticated:
-        return redirect(next_page)
+        auth.logout(request)
+        # return redirect(next_page)
 
     if request.method == 'POST':
         form = login_form(request.POST)
