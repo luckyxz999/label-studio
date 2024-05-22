@@ -576,7 +576,7 @@ PROJECT_DELETE = project_delete
 USER_AUTH = user_auth
 COLLECT_VERSIONS = collect_versions_dummy
 
-WEBHOOK_TIMEOUT = float(get_env('WEBHOOK_TIMEOUT', 1.0))
+WEBHOOK_TIMEOUT = float(get_env('WEBHOOK_TIMEOUT', 2.0))
 WEBHOOK_BATCH_SIZE = int(get_env('WEBHOOK_BATCH_SIZE', 100))
 WEBHOOK_SERIALIZERS = {
     'project': 'webhooks.serializers_for_hooks.ProjectWebhookSerializer',
