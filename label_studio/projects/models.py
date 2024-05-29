@@ -136,6 +136,9 @@ class Project(ProjectMixin, models.Model):
         _('description'), blank=True, null=True, default='', help_text='Project description'
     )
 
+    audit_status = models.CharField(_('audit status'), max_length=16, default='0', null=True, blank=True,
+                                    help_text='0=Not Audited; 1=Audited')
+
     organization = models.ForeignKey(
         'organizations.Organization', on_delete=models.CASCADE, related_name='projects', null=True
     )
@@ -390,6 +393,10 @@ class Project(ProjectMixin, models.Model):
     def reset_token(self):
         self.token = create_hash()
         self.save(update_fields=['token'])
+
+    def update_audit_status(self, status):
+        self.audit_status = status
+        self.save(update_fields=['audit_status'])
 
     def add_collaborator(self, user):
         created = False

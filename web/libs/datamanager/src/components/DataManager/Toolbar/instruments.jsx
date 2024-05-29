@@ -6,7 +6,7 @@ import { FieldsButton } from "../../Common/FieldsButton";
 import { FiltersPane } from "../../Common/FiltersPane";
 import { Icon } from "../../Common/Icon/Icon";
 import { Interface } from "../../Common/Interface";
-import { ExportButton, ImportButton } from "../../Common/SDKButtons";
+import { ExportButton, ImportButton} from "../../Common/SDKButtons";
 import { Tooltip } from "../../Common/Tooltip/Tooltip";
 import { ActionsButton } from "./ActionsButton";
 import { GridWidthButton } from "./GridWidthButton";
@@ -14,6 +14,7 @@ import { LabelButton } from "./LabelButton";
 import { LoadingPossum } from "./LoadingPossum";
 import { OrderButton } from "./OrderButton";
 import { RefreshButton } from "./RefreshButton";
+import { AuditButton } from "./AuditButton";
 import { ViewToggle } from "./ViewToggle";
 
 const style = {
@@ -101,6 +102,9 @@ export const instruments = {
   },
   refresh: ({ size }) => {
     return <RefreshButton size={size} />;
+  },
+  audit: ({ size }) => {
+    return <AuditButton size={size} />;
   },
   "loading-possum": () => {
     return <LoadingPossum />;
