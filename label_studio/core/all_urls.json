@@ -186,6 +186,12 @@
         "decorators": ""
     },
     {
+        "url": "/api/projects/<int:pk>/audit/",
+        "module": "projects.api.ProjectAuditAPI",
+        "name": "projects:api:project-audit",
+        "decorators": ""
+    },
+    {
         "url": "/api/projects/<int:pk>/imports/<int:import_pk>/",
         "module": "projects.api.ProjectImportAPI",
         "name": "projects:api:project-imports",

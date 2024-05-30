@@ -78,6 +78,8 @@ class Task(TaskMixin, models.Model):
         null=True,
         help_text='Project ID for this task',
     )
+    audit_status = models.CharField(_('audit status'), max_length=16, default='0', null=True, blank=True,
+                                    help_text='0=Not Audited; 1=Audited')
     created_at = models.DateTimeField(_('created at'), auto_now_add=True, help_text='Time a task was created')
     updated_at = models.DateTimeField(_('updated at'), auto_now=True, help_text='Last time a task was updated')
     updated_by = models.ForeignKey(
@@ -495,6 +497,10 @@ class Task(TaskMixin, models.Model):
         if hasattr(self.project, 'summary'):
             summary = self.project.summary
             summary.remove_data_columns([self])
+
+    def update_audit_status(self, status):
+        self.audit_status = status
+        self.save(update_fields=['audit_status'])
 
     def ensure_unique_groundtruth(self, annotation_id):
         self.annotations.exclude(id=annotation_id).update(ground_truth=False)

@@ -97,6 +97,7 @@ class WebhookAction(models.Model):
     PROJECT_CREATED = 'PROJECT_CREATED'
     PROJECT_UPDATED = 'PROJECT_UPDATED'
     PROJECT_DELETED = 'PROJECT_DELETED'
+    PROJECT_AUDITED = 'PROJECT_AUDITED'
 
     TASKS_CREATED = 'TASKS_CREATED'
     TASKS_DELETED = 'TASKS_DELETED'
@@ -122,6 +123,15 @@ class WebhookAction(models.Model):
         },
         PROJECT_UPDATED: {
             'name': _('Project updated'),
+            'description': _(''),
+            'key': 'project',
+            'many': False,
+            'model': Project,
+            'serializer': load_func(settings.WEBHOOK_SERIALIZERS['project']),
+            'project-field': '__self__',
+        },
+        PROJECT_AUDITED: {
+            'name': _('Project audited'),
             'description': _(''),
             'key': 'project',
             'many': False,

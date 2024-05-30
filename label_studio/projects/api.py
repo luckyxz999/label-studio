@@ -392,6 +392,23 @@ class ProjectLabelConfigValidateAPI(generics.RetrieveAPIView):
         return super(ProjectLabelConfigValidateAPI, self).get(request, *args, **kwargs)
 
 
+class ProjectAuditAPI(generics.RetrieveAPIView):
+    """audit project"""
+    permission_required = all_permissions.projects_change
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+
+    def get(self, request, *args, **kwargs):
+        return super(ProjectAuditAPI, self).get(request, *args, **kwargs)
+
+    @api_webhook(WebhookAction.PROJECT_AUDITED)
+    def post(self, request, *args, **kwargs):
+        project = self.get_object()
+        project.update_audit_status('1')
+
+        return super(ProjectAuditAPI, self).get(request, *args, **kwargs)
+        # return Response(status=status.HTTP_200_OK)
+
 class ProjectSummaryAPI(generics.RetrieveAPIView):
     parser_classes = (JSONParser,)
     serializer_class = ProjectSummarySerializer

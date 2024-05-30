@@ -410,6 +410,15 @@ export const AppStore = types
       self.loading = value;
     },
 
+    auditProject(projectId) {
+      console.log("audit project " + projectId)
+      self.apiCall("auditProject", {
+        params: {
+          pk: projectId,
+        },
+      });
+    },
+
     fetchProject: flow(function* (options = {}) {
       self.projectFetch = options.force === true;
 

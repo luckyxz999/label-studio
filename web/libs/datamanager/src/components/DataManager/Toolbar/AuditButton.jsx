@@ -16,8 +16,7 @@ export const AuditButton = injector(({ store, needsDataFetch, projectFetch, size
       size={size}
       look="danger"
       onClick={async () => {
-        await store.fetchProject({ force: true, interaction: "refresh" });
-        await store.currentView?.reload();
+        await store.auditProject(1);
       }}
       style={{
         ...(style ?? {}),

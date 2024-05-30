@@ -167,6 +167,7 @@ export class DataManager {
       toolbar: true,
       import: true,
       export: true,
+      audit: true,
       labelButton: true,
       backButton: true,
       labelingHeader: true,
