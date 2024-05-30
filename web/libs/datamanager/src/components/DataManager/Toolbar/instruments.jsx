@@ -14,8 +14,8 @@ import { LabelButton } from "./LabelButton";
 import { LoadingPossum } from "./LoadingPossum";
 import { OrderButton } from "./OrderButton";
 import { RefreshButton } from "./RefreshButton";
-// import { AuditButton } from "./AuditButton";
 import { ViewToggle } from "./ViewToggle";
+import {inject} from "mobx-react";
 
 const style = {
   minWidth: "110px",
@@ -104,7 +104,6 @@ export const instruments = {
     return <RefreshButton size={size} />;
   },
   audit: ({ size }) => {
-    // return <AuditButton size={size} />;
     return (
       <Interface name="audit">
         <AuditButton look="primary" size={size}>审核完成</AuditButton>
