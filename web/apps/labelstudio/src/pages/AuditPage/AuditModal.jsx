@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import {useCallback, useContext, useRef, useState} from "react";
 import { useHistory } from "react-router";
 import { Button } from "../../components";
 import { Modal } from "../../components/Modal/Modal";
@@ -9,8 +9,10 @@ import { useFixedLocation } from "../../providers/RoutesProvider";
 import { Elem } from "../../utils/bem";
 import { useRefresh } from "../../utils/hooks";
 import { useAuditPage } from "./useAuditPage";
+import { ToastContext } from "../../components/Toast/Toast";
 
 export const Inner = () => {
+  const toast = useContext(ToastContext);
   const history = useHistory();
   const location = useFixedLocation();
   const modal = useRef();
@@ -36,7 +38,7 @@ export const Inner = () => {
 
   const onFinish = useCallback(async () => {
     const imported = await finishAudit();
-
+    toast.show({ message: "审核成功！", type: "info" });
     if (!imported) return;
     backToDM();
   }, [backToDM, finishAudit]);
