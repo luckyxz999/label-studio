@@ -116,9 +116,9 @@ export const instruments = {
   "label-button": ({ size }) => {
     return <LabelButton size={size} />;
   },
-  actions: ({ size }) => {
-    return <ActionsButton size={size} style={style} />;
-  },
+  // actions: ({ size }) => {
+  //   return <ActionsButton size={size} style={style} />;
+  // },
   "error-box": () => {
     return <ErrorBox />;
   },
