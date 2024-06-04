@@ -122,18 +122,18 @@ export const instruments = {
   "error-box": () => {
     return <ErrorBox />;
   },
-  "import-button": ({ size }) => {
-    return (
-      <Interface name="import">
-        <ImportButtonWithChecks size={size} />
-      </Interface>
-    );
-  },
-  "export-button": ({ size }) => {
-    return (
-      <Interface name="export">
-        <ExportButton size={size}>导出</ExportButton>
-      </Interface>
-    );
-  },
+  // "import-button": ({ size }) => {
+  //   return (
+  //     <Interface name="import">
+  //       <ImportButtonWithChecks size={size} />
+  //     </Interface>
+  //   );
+  // },
+  // "export-button": ({ size }) => {
+  //   return (
+  //     <Interface name="export">
+  //       <ExportButton size={size}>导出</ExportButton>
+  //     </Interface>
+  //   );
+  // },
 };
